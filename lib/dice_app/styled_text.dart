@@ -4,17 +4,18 @@ Alignment? startAlignment;
 Alignment? endAlignment;
 
 class StyledText extends StatelessWidget {
-  const StyledText(this.text, {super.key});
+  const StyledText({super.key, required this.text, required this.color});
 
   final String text;
+  final Color color;
 
   @override
   Widget build(context) {
     return Text(
       text,
       textAlign: TextAlign.center,
-      style: const TextStyle(
-        color: Colors.white,
+      style: TextStyle(
+        color: color,
         fontSize: 28,
       ),
     );
